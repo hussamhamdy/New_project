@@ -1,0 +1,2 @@
+PWM.c:7:6:PWM_vidInit	16	static
+PWM.c:18:6:PWM_vidStart	24	static
