@@ -1,0 +1,2 @@
+ultasonic.c:19:6:US_vidInit	16	static
+ultasonic.c:27:9:US_u8CalculateDistance	16	static
