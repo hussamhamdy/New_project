@@ -5,12 +5,14 @@
  *      Author: Mahmoud Ayman
  */
 
+#include "stm32f1xx_hal.h"
+#include "SchM.h"
 
 typedef void (*tpfvidTaskEntry)(void);
 
 typedef struct _strTaskEntry
 {
-	uint8_t u8Periodicity;
+	u8 u8Periodicity;
 	tpfvidTaskEntry pfvidTaskEntry;
 } strTaskEntry;
 
@@ -26,23 +28,19 @@ static strTaskEntry astrTaskList[u8NUMBER_OF_TASKS] =
 	};
 
 
-uint16_t LOC_u16FreeRunningCounter;
+u16 LOC_u16FreeRunningCounter;
 
 void vidUpdateTick(void);
 BOOL bIsReadyToExecute(u8 u8TaskPeriodicty);
 
 void SchM_vidInit(void)
 {
-	LOC_u16FreeRunningCounter = 0;
-	Timer_bTimersInit();
+	 MX_TIM4_Init();
 }
 
 void SchM_vidScheduler(void)
 {
-	/*TODO: Initialize application blocks*/
-	//	COMM_vidInit();
-
-
+	
 	/*start of Super Loop*/
 	Timer_bSetTimer(TIMER_OS_TICK_TIMER, SCHM_SYSTEM_TICK);
 	Timer_bStartTimer(TIMER_OS_TICK_TIMER);

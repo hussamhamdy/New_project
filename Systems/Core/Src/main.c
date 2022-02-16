@@ -55,9 +55,6 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 
-
-
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -75,7 +72,7 @@ static void MX_TIM4_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint16_t readValue ;
+uint16_t readValue;
 /* USER CODE END 0 */
 
 /**
@@ -85,7 +82,7 @@ uint16_t readValue ;
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	char msg[10];
+  char msg[10];
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -115,9 +112,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
   US_vidInit(&htim2);
 
-
- //  PWM_vidInit(&htim3, TIM_CHANNEL_3);
-   //HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+  //  PWM_vidInit(&htim3, TIM_CHANNEL_3);
+  //HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
 
   /* USER CODE END 2 */
 
@@ -126,8 +122,7 @@ int main(void)
   while (1)
   {
 
-
-/*
+    /*
 	     sprintf(msg, "%hu\r\n",Value1);
 	      HAL_UART_Transmit(&huart1, (uint8_t *)msg, strlen(msg), HAL_MAX_DELAY);
 	      HAL_Delay(1);
@@ -136,24 +131,22 @@ int main(void)
 	        HAL_Delay(1);
 */
 
-	//  PWM_vidStart(50);
-	        //uint8_t RxByte  ;
-	        uint8_t TxByte = US_u8CalculateDistance() ;
-//	        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
-//	            HAL_SPI_TransmitReceive(&hspi1, &TxByte, &RxByte, 1, HAL_MAX_DELAY);
-//
-//	            HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
-//	     sprintf(msg, "%hu\r\n",RxByte);
-	      sprintf(msg, "%hu\r\n",TxByte);
-	     HAL_UART_Transmit(&huart1, (uint8_t *)msg, strlen(msg), HAL_MAX_DELAY);
-	     HAL_Delay(1000);
+    //  PWM_vidStart(50);
+    //uint8_t RxByte  ;
+    uint8_t TxByte = US_u8CalculateDistance();
+    //	        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
+    //	            HAL_SPI_TransmitReceive(&hspi1, &TxByte, &RxByte, 1, HAL_MAX_DELAY);
+    //
+    //	            HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
+    //	     sprintf(msg, "%hu\r\n",RxByte);
+    sprintf(msg, "%hu\r\n", TxByte);
+    HAL_UART_Transmit(&huart1, (uint8_t *)msg, strlen(msg), HAL_MAX_DELAY);
+    HAL_Delay(1000);
 
-//	     dutyCycle =(uint16_t) (255 * 20)/100;
-//
-//	     __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, dutyCycle);
-	     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-
-
+    //	     dutyCycle =(uint16_t) (255 * 20)/100;
+    //
+    //	     __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, dutyCycle);
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
     /* USER CODE END WHILE */
 
@@ -185,8 +178,7 @@ void SystemClock_Config(void)
   }
   /** Initializes the CPU, AHB and APB buses clocks
   */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
@@ -246,7 +238,6 @@ static void MX_ADC1_Init(void)
   /* USER CODE BEGIN ADC1_Init 2 */
 
   /* USER CODE END ADC1_Init 2 */
-
 }
 
 /**
@@ -284,7 +275,6 @@ static void MX_SPI1_Init(void)
   /* USER CODE BEGIN SPI1_Init 2 */
 
   /* USER CODE END SPI1_Init 2 */
-
 }
 
 /**
@@ -329,7 +319,6 @@ static void MX_TIM2_Init(void)
   /* USER CODE BEGIN TIM2_Init 2 */
 
   /* USER CODE END TIM2_Init 2 */
-
 }
 
 /**
@@ -374,7 +363,6 @@ static void MX_TIM3_Init(void)
   /* USER CODE BEGIN TIM3_Init 2 */
 
   /* USER CODE END TIM3_Init 2 */
-
 }
 
 /**
@@ -419,7 +407,6 @@ static void MX_TIM4_Init(void)
   /* USER CODE BEGIN TIM4_Init 2 */
 
   /* USER CODE END TIM4_Init 2 */
-
 }
 
 /**
@@ -452,7 +439,6 @@ static void MX_USART1_UART_Init(void)
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
-
 }
 
 /**
@@ -473,7 +459,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3|GPIO_PIN_8, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3 | GPIO_PIN_8, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : PC13 */
   GPIO_InitStruct.Pin = GPIO_PIN_13;
@@ -483,7 +469,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PA3 PA8 */
-  GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_8;
+  GPIO_InitStruct.Pin = GPIO_PIN_3 | GPIO_PIN_8;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -494,7 +480,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
 }
 
 /* USER CODE BEGIN 4 */
@@ -514,7 +499,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE BEGIN Callback 0 */
 
   /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM1) {
+  if (htim->Instance == TIM1)
+  {
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
@@ -537,7 +523,7 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.

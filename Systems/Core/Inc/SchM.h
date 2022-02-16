@@ -9,7 +9,7 @@
 #ifndef SCHM_H_
 #define SCHM_H_
 
-
+#include "Types.h"
 
 #define SCHM_SYSTEM_TICK	5
 
