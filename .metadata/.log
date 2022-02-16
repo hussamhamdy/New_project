@@ -409,45 +409,78 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\New_project
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-02-13 21:03:00.940
 !MESSAGE Started RMI Server, listening on port 41337
-!SESSION 2022-02-13 21:44:21.969 -----------------------------------------------
-eclipse.buildId=Version 1.6.1
-java.version=11.0.9.1
+!SESSION 2022-02-13 21:50:28.740 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
 java.vendor=AdoptOpenJDK
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-02-13 21:44:28.843
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-02-13 21:50:32.861
 !MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-02-13 21:44:28.898
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-02-13 21:50:32.923
 !MESSAGE Log4j initialized with config file D:\New_project\.metadata\.log4j.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-02-13 21:44:34.895
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-02-13 21:50:40.091
 !MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2022-02-13 21:44:35.463
-!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-02-13 21:44:41.723
-!MESSAGE Indexed 'Systems' (51 sources, 166 headers) in 5.85 sec: 13,740 declarations; 89,214 references; 2 unresolved inclusions; 36 syntax errors; 190 unresolved names (0.18%)
-!SESSION 2022-02-15 21:00:10.835 -----------------------------------------------
-eclipse.buildId=Version 1.6.1
-java.version=11.0.9.1
+!SESSION 2022-02-13 21:56:44.451 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
 java.vendor=AdoptOpenJDK
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-!ENTRY org.eclipse.core.resources 2 10035 2022-02-15 21:00:15.217
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-02-15 21:00:26.518
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-02-13 21:56:50.235
 !MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-02-15 21:00:26.693
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-02-13 21:56:50.282
 !MESSAGE Log4j initialized with config file D:\New_project\.metadata\.log4j.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-02-15 21:00:36.446
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-02-13 21:56:56.776
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-02-16 08:07:16.643 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2022-02-15 21:00:36.948
-!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-02-16 08:07:26.992
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-02-16 08:07:27.197
+!MESSAGE Log4j initialized with config file D:\New_project\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-02-16 08:07:53.039
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-02-16 08:58:53.406 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-02-16 08:58:57.609
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-02-16 08:58:57.660
+!MESSAGE Log4j initialized with config file D:\New_project\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-02-16 08:59:20.810
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-02-16 20:39:40.630 -----------------------------------------------
+eclipse.buildId=Version 1.7.0
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-02-16 20:39:45.075
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-02-16 20:39:45.126
+!MESSAGE Log4j initialized with config file D:\New_project\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-02-16 20:39:51.731
+!MESSAGE Started RMI Server, listening on port 41337

@@ -1,0 +1,21 @@
+/*
+ * MCP.c
+ *
+ *  Created on: Feb 16, 2022
+ *      Author: Hussam Hamdy
+ */
+
+#include "stm32f1xx_hal.h"
+
+#include "MCP.h"
+
+uint8_t MCP2515_U8ReadRegister(uint8_t address){
+	uint8_t regVal ;
+	uint8_t dummy ;
+	HAL_GPIO_WritePin(CsPort, CsPIN, GPIO_PIN_RESET);
+	HAL_SPI_TransmitReceive(hspi, INST_READ, &dummy, 1, Timeout);
+	HAL_SPI_TransmitReceive(hspi, &address, &dummy, 1, Timeout);
+	HAL_SPI_TransmitReceive(hspi, 0, &regVal, 1, Timeout);
+	HAL_GPIO_WritePin(CsPort, CsPIN, GPIO_PIN_SET);
+
+}

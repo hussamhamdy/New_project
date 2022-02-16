@@ -1,0 +1,15 @@
+/*
+ * MCP.c
+ *
+ *  Created on: Feb 16, 2022
+ *      Author: Hussam Hamdy
+ */
+
+
+uint8_t MCP2515_U8ReadRegister(uint8_t address){
+	uint8_t regVal ;
+
+	HAL_GPIO_WritePin(CsPort, CsPIN, GPIO_PIN_RESET);
+	HAL_SPI_TransmitReceive(hspi, &address, pRxData, 1, Timeout);
+
+}
