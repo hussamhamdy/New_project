@@ -10,16 +10,17 @@
 
 #include "stm32f1xx_hal.h"
 
-uint8_t MCP2515_U8ReadRegister(uint8_t address);
-void MCP2515_voidWriteRegister(uint8_t address , uint8_t value);
-void MCP2515_voidSetBitTiming(uint8_t cnf1Value, uint8_t cnf2Value, uint8_t cnf3Value);
-void MCP2515_voidReset(void);
-void MCP2515_voidChangeBits(uint8_t address ,uint8_t mask, uint8_t value);
-void MCP2515_voidSetMode(uint8_t mode);
-void MCP2515_voidSetRollover(uint8_t value);
-void MCP2515_voidsetMask(uint8_t maskaddress , uint32_t maskvalue , uint8_t extended);
-void MCP2515_voidReciveInit(void);
-void MCP2515_voidRecieveCANmsg(void);
+u8 MCP2515_U8ReadRegister(u8 address);
+void MCP2515_VidWriteRegister(u8 address, u8 value);
+void MCP2515_VidSetBitTiming(u8 cnf1Value, u8 cnf2Value, u8 cnf3Value);
+void MCP2515_VidReset();
+void MCP2515_VidChangeBits(u8 RegAddress, u8 Mask, u8 Value);
+void MCP2515_VidSetMode(u8 mode);
+void MCP2515_VidReceiveInit(void);
+void MCP2515_VidInit(void);
+void MCP2515_VidReceiveCANmsg(void);
+void MCP2515_VidSendCANmsg(u8 bufIdx, u32 msgID, u8 * data,u8 properties);
+
 
 #define MCP2515_MODE_NORMAL			0x0
 #define MCP2515_MODE_SLEEP			0x1

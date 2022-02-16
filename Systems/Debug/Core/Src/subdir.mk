@@ -5,6 +5,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/Src/MCP.c \
 ../Core/Src/PWM.c \
 ../Core/Src/main.c \
 ../Core/Src/stm32f1xx_hal_msp.c \
@@ -16,6 +17,7 @@ C_SRCS += \
 ../Core/Src/ultasonic.c 
 
 OBJS += \
+./Core/Src/MCP.o \
 ./Core/Src/PWM.o \
 ./Core/Src/main.o \
 ./Core/Src/stm32f1xx_hal_msp.o \
@@ -27,6 +29,7 @@ OBJS += \
 ./Core/Src/ultasonic.o 
 
 C_DEPS += \
+./Core/Src/MCP.d \
 ./Core/Src/PWM.d \
 ./Core/Src/main.d \
 ./Core/Src/stm32f1xx_hal_msp.d \

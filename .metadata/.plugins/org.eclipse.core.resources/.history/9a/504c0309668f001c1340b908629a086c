@@ -89,7 +89,7 @@ void MCP2515_voidsetMask(uint8_t maskaddress , uint32_t maskvalue , uint8_t exte
 	uint8_t value ;
 	HAL_GPIO_WritePin(CsPort, CsPIN, GPIO_PIN_RESET);
 	inst = INST_WRITE ;
-	HAL_SPI_TransmitReceive(hspi, &inst, &dummy, 1, Timeout);
+	HAL_SPI_TransmitReceive(hspi, inst, &dummy, 1, Timeout);
 	HAL_SPI_TransmitReceive(hspi, &maskaddress, &dummy, 1, Timeout);
 	if(extended){
 	value = ((uint8_t) (maskvalue >> 3)) ;
@@ -126,10 +126,8 @@ void MCP2515_voidReciveInit(void){
 void MCP2515_voidRecieveCANmsg(void){
 	uint8_t dummy ;
 		HAL_GPIO_WritePin(CsPort, CsPIN, GPIO_PIN_RESET);
-		inst = INST_READ ;
-		HAL_SPI_TransmitReceive(hspi, &inst, &dummy, 1, Timeout);
-		inst = RXB0CTRL ;
-		HAL_SPI_TransmitReceive(hspi, &inst, &dummy, 1, Timeout);
+		HAL_SPI_TransmitReceive(hspi, INST_READ, &dummy, 1, Timeout);
+		HAL_SPI_TransmitReceive(hspi, RXB0CTRL, &dummy, 1, Timeout);
 
 
 		for(uint8_t i = 0 ; i<14 ; i++){

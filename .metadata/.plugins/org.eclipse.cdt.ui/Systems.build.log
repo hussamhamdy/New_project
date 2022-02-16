@@ -1,22 +1,10 @@
-20:16:33 **** Incremental Build of configuration Debug for project Systems ****
+22:22:02 **** Incremental Build of configuration Debug for project Systems ****
 make -j4 all 
-arm-none-eabi-gcc -o "Systems.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\New_project\Systems\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Systems.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Systems.elf
- 
 arm-none-eabi-size   Systems.elf 
-arm-none-eabi-objdump -h -S  Systems.elf  > "Systems.list"
-arm-none-eabi-objcopy  -O ihex  Systems.elf  "Systems.hex"
-arm-none-eabi-objcopy  -O binary  Systems.elf  "Systems.bin"
    text	   data	    bss	    dec	    hex	filename
-  15884	    120	   2048	  18052	   4684	Systems.elf
+  17688	    120	   2120	  19928	   4dd8	Systems.elf
 Finished building: default.size.stdout
  
-Finished building: Systems.hex
-Finished building: Systems.bin
- 
- 
-Finished building: Systems.list
- 
 
-20:16:34 Build Finished. 0 errors, 0 warnings. (took 877ms)
+22:22:02 Build Finished. 0 errors, 0 warnings. (took 263ms)
 

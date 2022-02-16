@@ -1,0 +1,10 @@
+MCP.c:22:9:MCP2515_U8ReadRegister	32	static
+MCP.c:34:6:MCP2515_voidWriteRegister	32	static
+MCP.c:46:6:MCP2515_voidSetBitTiming	16	static
+MCP.c:53:6:MCP2515_voidReset	24	static
+MCP.c:63:6:MCP2515_voidChangeBits	32	static
+MCP.c:76:6:MCP2515_voidSetMode	16	static
+MCP.c:81:6:MCP2515_voidSetRollover	16	static
+MCP.c:86:6:MCP2515_voidsetMask	32	static
+MCP.c:113:6:MCP2515_voidReciveInit	8	static
+MCP.c:126:6:MCP2515_voidRecieveCANmsg	24	static
